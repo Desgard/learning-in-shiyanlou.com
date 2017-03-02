@@ -11,12 +11,11 @@ $ python3 syltool.py -h
 usage: syltool.py [-h] [-g GETT] [-cc] [-cs] [-s]
 
 optional arguments:
-  -h, --help            show this help message and exit
-  -g GETT, --gett GETT  get the name of course by course code. [given a
-                        number]
-  -cc, --cf-c           create a folder in default path in client.
-  -cs, --cf-s           create a folder in default path in server.
-  -s, --scp             scp the files to server folder
+  -h,   --help              show this help message and exit
+  -g    GETT, --gett GETT   get the name of course by course code. [given a number]
+  -cc,  --cf-c              create a folder in default path in client.
+  -cs,  --cf-s              create a folder in default path in server.
+  -s,   --scp               scp the files to server folder
 ```
 
 ### etc.
