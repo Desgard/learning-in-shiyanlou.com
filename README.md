@@ -27,4 +27,17 @@ I was learning the Course [<Git 实战教程>](https://www.shiyanlou.com/courses
 $ python3 syltool.py -g 4 -cc
 ```
 
+And you will see the folder structure:
+
+```bash
+Git 实战教程
+.
+├── git介绍
+├── 基本用法（上）
+├── 基本用法（下）
+├── 中级技能（上）
+├── 中级技能（下）
+└── 高级技能
+```
+
 Very convenient. 😊 
