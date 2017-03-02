@@ -15,10 +15,16 @@ parser.add_argument("-g", "--gett", help = "get the name of course by course cod
 parser.add_argument("-cc", "--cf-c", help = "create a folder in default path in client.", action = 'store_true')
 parser.add_argument("-cs", "--cf-s", help = "create a folder in default path in server.", action = 'store_true')
 parser.add_argument("-s", "--scp", help = "scp the files to server folder", action = 'store_true')
+parser.add_argument("-p", "--port", help = "ssh connect to server - port", type = int)
+parser.add_argument("-u", "--user", help = "ssh connect to server - user")
+parser.add_argument("-a", "--address", help = "ssh connect to server - ip")
 
 args = parser.parse_args()
 course_msg = Course()
 course_code = args.gett
+server_ip = args.address
+server_port = args.port
+server_user = args.user
 
 if args.gett:
     url = str(DEFALUT_ROOTWEB_URL) + str(course_code)
@@ -56,6 +62,12 @@ if args.cf_c:
         os.system(cmd)
 
 
-
 if args.cf_s:
-    print("s, build")
+    if (server_ip != None and server_port != None and server_user != None) :
+        print("Build folders...")
+        cmd = "mkdir Course-" + str(course_msg.code)
+        os.system(cmd)
+        for i in range(0, len(course_msg.chapter)):
+            cmd = "mkdir Course-" + str(course_msg.code) + "/Chapter-" + str(i)
+            os.system(cmd)
+        
