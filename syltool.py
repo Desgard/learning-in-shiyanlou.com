@@ -70,4 +70,4 @@ if args.cf_s:
         for i in range(0, len(course_msg.chapter)):
             cmd = "mkdir Course-" + str(course_msg.code) + "/Chapter-" + str(i)
             os.system(cmd)
-        
+
