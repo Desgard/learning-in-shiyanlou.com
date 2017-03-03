@@ -8,14 +8,17 @@ Learning Programming in shiyanlou.com. And I write a python shell to manage the 
 
 ```bash
 $ python3 syltool.py -h
-usage: syltool.py [-h] [-g GETT] [-cc] [-cs] [-s]
+usage: syltool.py [-h] [-g GETT] [-cc] [-cs] [-s] [-p PORT] [-u USER] [-a ADDRESS]
 
 optional arguments:
-  -h,   --help              show this help message and exit
-  -g    GETT, --gett GETT   get the name of course by course code. [given a number]
-  -cc,  --cf-c              create a folder in default path in client.
-  -cs,  --cf-s              create a folder in default path in server.
-  -s,   --scp               scp the files to server folder
+  -h, --help            show this help message and exit
+  -g GETT, --gett GETT  get the name of course by course code. [given a number]
+  -cc, --cf-c           create a folder in default path in client.
+  -cs, --cf-s           create a folder in default path in server.
+  -s, --scp             scp the files to server folder
+  -p PORT, --port PORT  ssh connect to server - port
+  -u USER, --user USER  ssh connect to server - user
+  -a ADDRESS, --address ADDRESS ssh connect to server - ip
 ```
 
 ### etc.
