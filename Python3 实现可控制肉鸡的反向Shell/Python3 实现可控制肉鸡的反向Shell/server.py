@@ -48,7 +48,8 @@ print('=' * 80)
 def wait_connect(sk):
     global clientList
     while not quitThread:
-        if len(clientList) == 0:
+        print(len(clientList))
+        while len(clientList) == 0:
             print('Waiting for the connection......')
         sock, addr = sk.accept()
         print('New client %s is connection!' % (addr[0]))

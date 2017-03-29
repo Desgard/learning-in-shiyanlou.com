@@ -71,3 +71,4 @@ if args.cf_s:
             cmd = "mkdir Course-" + str(course_msg.code) + "/Chapter-" + str(i)
             os.system(cmd)
 
+

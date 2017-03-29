@@ -26,15 +26,16 @@ def main():
     parser = argparse.ArgumentParser()  #命令行参数解析对象
     parser.add_argument('-H',dest='hostName',help='Host Name')
     parser.add_argument('-p',dest='conPort',help='Host Port')
-    
+
     args = parser.parse_args()          #解析命令行参数
     host = args.hostName
+    print(host)
     port = args.conPort
-    
+
     if host == None and port == None:
         print(parser.parse_args(['-h']))
         exit(0)
-    
+
     connectHost(host,port)              #连接到控制端
 
 
